@@ -6,6 +6,6 @@ z4 = gf_mul(z2,z2,prim,m);
 Z3 = gf_mul(x2,z2,prim,m);
 X3 = xor(gf_mul(x2,x2,prim,m),z4);
 Y3 = xor(gf_mul(z4,Z3,prim,m),gf_mul(X3,xor(y2,z4),prim,m));
-% Y3 = xor(gf_mul(z4,Z3,prim,m),gf_mul(X3,xor(xor(y2,z4),Z3),prim,m));
+% Y3 = xor(gf_mul(z4,Z3,prim,m),gf_mul(X3,xor(xor(y2,z4),Z3),prim,m)); % a = 1
 out = [X3;Y3;Z3];
 end
