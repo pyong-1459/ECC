@@ -18,12 +18,6 @@ for j = 0:T-1
     end
     w = mod(u*w,p);
 end
-% F_delta = zeros(p-2,1);
-% for i = 1:p-2
-%     F_delta(i) = mod(F(i+1)-F(i), m);
-% end
-% Sa = fliplr(a);
-% Sb = fliplr(b);
 C = zeros(1,m);
 for i = 1:m
     c = 0;
@@ -34,6 +28,5 @@ for i = 1:m
     A = circshift(A,-1);
     B = circshift(B,-1);
 end
-% disp(poly2hex(C));
 out = fliplr(C);
 end
